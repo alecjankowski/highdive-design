@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Graphic Dive motif</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { width: 700px; height: 260px; padding: 0; background: #0A0A0A; position: relative; overflow: hidden; }
+  .slats { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; padding: 18px 0; }
+  .slat {
+    background: #FF3014;
+    height: 24px;
+    /* trapezoidal slats — receding perspective */
+  }
+  .slat:nth-child(1) { width: 80%; clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%); }
+  .slat:nth-child(2) { width: 70%; clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%); height: 22px; }
+  .slat:nth-child(3) { width: 60%; clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%); height: 20px; }
+  .slat:nth-child(4) { width: 50%; clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%); height: 18px; opacity: 0.85; }
+  .slat:nth-child(5) { width: 42%; clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%); height: 16px; opacity: 0.7; }
+  .diver {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    height: 200px;
+    filter: drop-shadow(0 6px 20px rgba(0,0,0,.6));
+  }
+  .label { position: absolute; bottom: 14px; left: 20px; right: 20px; color: #F4EFE5; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; display: flex; justify-content: space-between; }
+</style></head>
+<body>
+  <div class="card">
+    <div class="slats">
+      <div class="slat"></div>
+      <div class="slat"></div>
+      <div class="slat"></div>
+      <div class="slat"></div>
+      <div class="slat"></div>
+    </div>
+    <img class="diver" src="../assets/logos/Diver/Diver_White.png">
+    <div class="label"><span>Graphic Dive · Visual Language</span><span>Black canvas · receding slats · diver hero</span></div>
+  </div>
+</body></html>

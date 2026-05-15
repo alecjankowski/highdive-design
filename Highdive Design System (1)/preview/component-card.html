@@ -1,0 +1,55 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Card &amp; Tag</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { width: 700px; padding: 28px; background: #F4EFE5; color: #0A0A0A; display: flex; gap: 18px; }
+  .work-card {
+    flex: 1;
+    background: #F4EFE5;
+    box-shadow: inset 0 0 0 1.5px #0A0A0A;
+    padding: 22px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .work-card .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; }
+  .work-card .title { font-size: 22px; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
+  .work-card .meta { font-size: 13px; opacity: 0.7; }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; }
+  .tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    background: transparent;
+    color: #0A0A0A;
+    box-shadow: inset 0 0 0 1.25px #0A0A0A;
+    border-radius: 999px;
+    line-height: 1;
+  }
+  .tag.hot { background: #FF3014; color: #FFFFFF; box-shadow: none; }
+  .tag.solid { background: #0A0A0A; color: #F4EFE5; box-shadow: none; }
+
+  .work-card.dark { background: #0A0A0A; color: #F4EFE5; box-shadow: none; }
+  .work-card.dark .tag { color: #F4EFE5; box-shadow: inset 0 0 0 1.25px #F4EFE5; }
+</style></head>
+<body>
+  <div class="card">
+    <div class="work-card">
+      <div class="eyebrow">Case Study · 2025</div>
+      <div class="title">Ditka's All In:<br>A brand that bets on you.</div>
+      <div class="meta">Brand identity · Campaign · 30s spot</div>
+      <div class="tags">
+        <span class="tag">Branding</span>
+        <span class="tag hot">New</span>
+        <span class="tag">Film</span>
+      </div>
+    </div>
+    <div class="work-card dark">
+      <div class="eyebrow" style="opacity:.7">Featured</div>
+      <div class="title">Brave brands.<br>Bold work.</div>
+      <div class="meta" style="opacity:.7">CHI · NYC</div>
+      <div class="tags">
+        <span class="tag">Studio</span>
+        <span class="tag solid" style="background:#FF3014">Hot</span>
+      </div>
+    </div>
+  </div>
+</body></html>

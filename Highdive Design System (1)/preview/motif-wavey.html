@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Wavey motif</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { width: 700px; height: 260px; padding: 0; background: #FF3014; position: relative; overflow: hidden; }
+  .waves { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .label { position: absolute; bottom: 14px; left: 20px; right: 20px; display: flex; justify-content: space-between; align-items: center; color: #FFFFFF; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; z-index: 2; }
+</style></head>
+<body>
+  <div class="card">
+    <svg class="waves" viewBox="0 0 700 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- A single wavy line we'll tile vertically -->
+        <symbol id="wave" overflow="visible">
+          <path
+            d="M -20 12
+               C 60 12, 80 -20, 140 -20
+               C 200 -20, 220 12, 300 12
+               C 380 12, 400 -20, 460 -20
+               C 520 -20, 540 12, 620 12
+               C 700 12, 720 -20, 780 -20"
+            fill="none"
+            stroke="rgba(0,0,0,0.22)"
+            stroke-width="9"
+            stroke-linecap="round" />
+        </symbol>
+      </defs>
+
+      <!-- Tile the wave vertically. Each row offsets phase via x translate. -->
+      <g>
+        <use href="#wave" x="0"   y="0"  />
+        <use href="#wave" x="-40" y="22" />
+        <use href="#wave" x="-80" y="44" />
+        <use href="#wave" x="-120" y="66" />
+        <use href="#wave" x="-160" y="88" />
+        <use href="#wave" x="-200" y="110" />
+        <use href="#wave" x="-240" y="132" />
+        <use href="#wave" x="-280" y="154" />
+        <use href="#wave" x="-320" y="176" />
+        <use href="#wave" x="-360" y="198" />
+        <use href="#wave" x="-400" y="220" />
+      </g>
+    </svg>
+    <div class="label">
+      <span>Wavey · Visual Language</span>
+      <span>Layered wave forms · Highdive Orange</span>
+    </div>
+  </div>
+</body></html>

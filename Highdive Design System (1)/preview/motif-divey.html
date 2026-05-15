@@ -1,0 +1,73 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Divey motif</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { width: 700px; height: 260px; padding: 0; background: #FF3014; position: relative; overflow: hidden; }
+  .d { position: absolute; pointer-events: none; }
+  .d img { width: 100%; height: 100%; display: block; }
+  /* Shadow divers — darker tint on orange */
+  .shadow { filter: brightness(0); opacity: 0.18; }
+  /* Mirror some so the flock feels alive */
+  .flip img { transform: scaleX(-1); }
+
+  /* A whole flock at varied sizes */
+  .d1  { left: 2%;   top: 8%;   width: 60px;  }
+  .d2  { left: 8%;   top: 62%;  width: 90px;  }
+  .d3  { left: 16%;  top: 30%;  width: 50px;  }
+  .d4  { left: 22%;  top: -2%;  width: 70px;  }
+  .d5  { left: 30%;  top: 70%;  width: 55px;  }
+  .d6  { left: 38%;  top: 18%;  width: 70px;  }
+  .d7  { left: 46%;  top: 60%;  width: 45px;  }
+  .d8  { left: 56%;  top: 6%;   width: 55px;  }
+  .d9  { left: 64%;  top: 70%;  width: 70px;  }
+  .d10 { left: 72%;  top: 24%;  width: 60px;  }
+  .d11 { left: 84%;  top: 4%;   width: 80px;  }
+  .d12 { left: 88%;  top: 56%;  width: 55px;  }
+  .d13 { left: 92%;  top: 22%;  width: 38px;  }
+  .d14 { left: 50%;  top: 38%;  width: 42px;  }
+  .d15 { left: 4%;   top: 38%;  width: 38px;  }
+
+  /* Hero script word */
+  .script {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) rotate(-4deg);
+    font-family: "Pacifico", cursive;
+    color: #FFFFFF;
+    font-size: 130px; line-height: 0.9;
+    text-shadow: 0 6px 0 rgba(0,0,0,0.18);
+    z-index: 2;
+    letter-spacing: -0.02em;
+  }
+
+  .label {
+    position: absolute; bottom: 14px; left: 20px; right: 20px;
+    color: #FFFFFF; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    display: flex; justify-content: space-between; z-index: 3;
+  }
+</style></head>
+<body>
+  <div class="card">
+    <div class="d d1 shadow"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d2 shadow flip"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d3 shadow"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d4 shadow flip"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d5 shadow"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d6 shadow"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d7 shadow flip"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d8 shadow"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d9 shadow flip"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d10 shadow"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d11 shadow"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d12 shadow flip"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d13 shadow"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d14 shadow"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="d d15 shadow flip"><img src="../assets/logos/Diver/Diver_Orange.png"></div>
+    <div class="script">Divey!</div>
+    <div class="label">
+      <span>Divey · Visual Language</span>
+      <span>A flock of divers · script lockup</span>
+    </div>
+  </div>
+</body></html>

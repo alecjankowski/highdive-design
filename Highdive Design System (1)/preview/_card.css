@@ -1,0 +1,34 @@
+/* preview-card.css — shared chrome for design-system spec cards.
+   Each card is ~700px wide and sits in the Design System tab. */
+@import url("../colors_and_type.css");
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--hd-cream);
+  font-family: var(--font-sans);
+  color: var(--hd-black);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  width: 700px;
+  padding: 24px 28px;
+  background: var(--hd-cream);
+}
+.card.dark   { background: var(--hd-black); color: var(--hd-cream); }
+.card.hot    { background: var(--hd-orange); color: var(--hd-white); }
+.card.ink    { background: var(--hd-black); color: var(--hd-cream); }
+.card.white  { background: var(--hd-white); }
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.row { display: flex; align-items: stretch; gap: 12px; }
+.col { display: flex; flex-direction: column; gap: 12px; }
+.grow { flex: 1; }

@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Color Combinations</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 0; width: 700px; height: 240px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; }
+  .tile { display: flex; flex-direction: column; justify-content: space-between; padding: 16px 18px; }
+  .tile .big { font-family: var(--font-display); font-size: 46px; line-height: 0.85; font-weight: 900; text-transform: uppercase; letter-spacing: -0.01em; }
+  .tile .cap { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.7; }
+  .a { background: #FF3014; color: #FFFFFF; grid-column: span 2; }
+  .a .big { font-size: 64px; }
+  .b { background: #0A0A0A; color: #F4EFE5; }
+  .c { background: #F4EFE5; color: #0A0A0A; }
+  .d { background: #FF3014; color: #0A0A0A; }
+  .e { background: #0A0A0A; color: #FF3014; }
+</style></head>
+<body>
+  <div class="card">
+    <div class="tile a"><div class="cap">Default · White on Orange</div><div class="big">Jump in.</div></div>
+    <div class="tile b"><div class="cap">Cinematic · Cream on Black</div><div class="big">Brave.</div></div>
+    <div class="tile c"><div class="cap">Editorial · Black on Cream</div><div class="big">Bold work.</div></div>
+    <div class="tile d"><div class="cap">Dual Ink · Black on Orange</div><div class="big">Loud.</div></div>
+    <div class="tile e"><div class="cap">Accent · Orange on Black</div><div class="big">Dive.</div></div>
+  </div>
+</body></html>

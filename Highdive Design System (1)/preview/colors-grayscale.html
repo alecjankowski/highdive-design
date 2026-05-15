@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Grayscale</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 0; width: 700px; height: 150px; display: flex; }
+  .sw { flex: 1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; }
+  .sw .lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+  .sw .hex { font-size: 12px; font-family: var(--font-sans); font-weight: 500; opacity: 0.7; }
+  .g900 { background: #1F1F1D; color: #F4EFE5; }
+  .g700 { background: #4A4A47; color: #F4EFE5; }
+  .g500 { background: #7A7A75; color: #F4EFE5; }
+  .g300 { background: #C7C3BB; color: #1F1F1D; }
+  .g100 { background: #EDEAE2; color: #1F1F1D; }
+  .w    { background: #FFFFFF; color: #1F1F1D; box-shadow: inset 0 0 0 1px #EDEAE2; }
+</style></head>
+<body>
+  <div class="card">
+    <div class="sw g900"><div class="lbl">Gray 900</div><div class="hex">#1F1F1D</div></div>
+    <div class="sw g700"><div class="lbl">Gray 700</div><div class="hex">#4A4A47</div></div>
+    <div class="sw g500"><div class="lbl">Gray 500</div><div class="hex">#7A7A75</div></div>
+    <div class="sw g300"><div class="lbl">Gray 300</div><div class="hex">#C7C3BB</div></div>
+    <div class="sw g100"><div class="lbl">Gray 100</div><div class="hex">#EDEAE2</div></div>
+    <div class="sw w"><div class="lbl">White</div><div class="hex">#FFFFFF</div></div>
+  </div>
+</body></html>

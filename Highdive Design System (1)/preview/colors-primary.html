@@ -1,0 +1,46 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Primary Palette</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 0; width: 700px; height: 220px; display: flex; }
+  .swatch { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 18px 20px; }
+  .swatch .name { font-family: var(--font-display); font-size: 30px; line-height: 0.9; text-transform: uppercase; font-weight: 900; letter-spacing: -0.01em; }
+  .swatch .hex  { font-family: var(--font-sans); font-size: 13px; font-weight: 500; letter-spacing: 0.04em; opacity: 0.85; }
+  .swatch .role { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; }
+  .orange { background: #FF3014; color: #FFFFFF; flex: 1.6; }
+  .cream  { background: #F4EFE5; color: #0A0A0A; }
+  .black  { background: #0A0A0A; color: #F4EFE5; }
+  .white  { background: #FFFFFF; color: #0A0A0A; box-shadow: inset 0 0 0 1px #EDEAE2; }
+</style></head>
+<body>
+  <div class="card">
+    <div class="swatch orange">
+      <div class="role">Primary</div>
+      <div>
+        <div class="name">Highdive<br>Orange</div>
+        <div class="hex" style="margin-top:6px">#FF3014</div>
+      </div>
+    </div>
+    <div class="swatch cream">
+      <div class="role">Surface</div>
+      <div>
+        <div class="name">Cream</div>
+        <div class="hex" style="margin-top:6px">#F4EFE5</div>
+      </div>
+    </div>
+    <div class="swatch black">
+      <div class="role">Ink</div>
+      <div>
+        <div class="name">Black</div>
+        <div class="hex" style="margin-top:6px">#0A0A0A</div>
+      </div>
+    </div>
+    <div class="swatch white">
+      <div class="role">Light Surface</div>
+      <div>
+        <div class="name">White</div>
+        <div class="hex" style="margin-top:6px">#FFFFFF</div>
+      </div>
+    </div>
+  </div>
+</body></html>

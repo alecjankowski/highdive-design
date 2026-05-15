@@ -1,0 +1,268 @@
+/* ============================================================
+   HIGHDIVE DESIGN SYSTEM — colors_and_type.css
+   Highdive is a Chicago + NYC advertising agency.
+   Tagline: "Fearless creative for the brave."
+   ============================================================ */
+
+/* ---------- TYPOGRAPHY (web font imports) ----------
+   Brand fonts (provided by client):
+   - Display  → ABC Gravity Compressed (Trial OTF)
+   - Body     → SAA Series W01 Bold     (OTF)
+
+   We still don't have a script font file for the "Highdive"
+   signature cursive used in the brand book. Pacifico remains the
+   closest free substitute on Google Fonts — flagged for user.
+
+   Note: SAA Series ships bold only (-BD). DM Sans is kept as a
+   regular-weight fallback so 400/500 body copy still renders.
+-----------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Pacifico&display=swap");
+
+@font-face {
+  font-family: "ABC Gravity";
+  src: url("fonts/ABCGravity-Compressed-Trial.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SAA Series";
+  src: url("fonts/SAASeriesW01-BD.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ====================================================
+     CORE PALETTE
+     Highdive's identity is built on three primary inks
+     plus neutrals. Color is used with high contrast —
+     full-bleed fields, no tints, no gradients.
+     ==================================================== */
+
+  /* (Green was removed from the brand palette — see README. Tokens
+     intentionally omitted; --hd-orange is the primary, with cream + black.) */
+
+  /* The signature high-energy red-orange. Used for the
+     Diver silhouette, full-bleed brand fields, accents. */
+  --hd-orange:       #FF3014;
+  --hd-orange-ink:   #E62200; /* hover / pressed darker */
+
+  /* Cream / off-white — Highdive's neutral background.
+     Warmer than #fff; pairs with green & orange. */
+  --hd-cream:        #F4EFE5;
+  --hd-cream-deep:   #E9E2D2; /* card surface on cream */
+
+  /* True neutrals */
+  --hd-white:        #FFFFFF;
+  --hd-black:        #0A0A0A;
+
+  /* Grays — derived from the brand "Gray" logo variant */
+  --hd-gray-900:     #1F1F1D;
+  --hd-gray-700:     #4A4A47;
+  --hd-gray-500:     #7A7A75;
+  --hd-gray-300:     #C7C3BB;
+  --hd-gray-100:     #EDEAE2;
+
+  /* ====================================================
+     SEMANTIC COLORS
+     ==================================================== */
+  --fg-1:            var(--hd-black);     /* primary text on cream/white */
+  --fg-2:            var(--hd-gray-700);  /* secondary text */
+  --fg-3:            var(--hd-gray-500);  /* tertiary / captions */
+  --fg-on-dark:      var(--hd-cream);     /* text on black / orange */
+  --fg-inverse:      var(--hd-white);     /* text on orange */
+  --fg-accent:       var(--hd-orange);    /* link, callout, hot spot */
+
+  --bg-1:            var(--hd-cream);     /* default canvas */
+  --bg-2:            var(--hd-cream-deep);/* cards on cream */
+  --bg-dark:         var(--hd-black);     /* dark canvas */
+  --bg-hot:          var(--hd-orange);    /* full-bleed brand field */
+  --bg-ink:          var(--hd-black);     /* film-still / cinematic surface */
+
+  --border:          var(--hd-black);     /* primary stroke (matches text) */
+  --border-soft:     rgba(10, 10, 10, 0.18);
+
+  /* ====================================================
+     TYPE FAMILIES
+     ==================================================== */
+  --font-display:    "ABC Gravity", "Big Shoulders Display", "Druk Wide", "Anton",
+                     "Impact", ui-sans-serif, system-ui, sans-serif;
+  --font-sans:       "SAA Series", "DM Sans", "Söhne", "Inter", ui-sans-serif,
+                     system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-script:     "Pacifico", "Bradley Hand", "Brush Script MT", cursive;
+
+  /* ====================================================
+     TYPE TOKENS
+     The display family is ultra-condensed and ultra-heavy.
+     Always set tight tracking + tight leading at large sizes.
+     ==================================================== */
+
+  /* Display — for the loud, identity-forward moments */
+  --t-mega-size:     clamp(96px, 14vw, 220px);
+  --t-mega-lh:       0.82;
+  --t-mega-tracking: -0.01em;
+  --t-mega-weight:   900;
+
+  --t-display-size:  clamp(64px, 8vw, 128px);
+  --t-display-lh:    0.85;
+  --t-display-weight:900;
+
+  /* Headings (body family at heavy weight) */
+  --t-h1-size:       clamp(40px, 5vw, 72px);
+  --t-h1-lh:         1.02;
+  --t-h1-weight:     700;
+
+  --t-h2-size:       clamp(28px, 3vw, 44px);
+  --t-h2-lh:         1.1;
+  --t-h2-weight:     700;
+
+  --t-h3-size:       22px;
+  --t-h3-lh:         1.25;
+  --t-h3-weight:     700;
+
+  /* Body */
+  --t-body-size:     17px;
+  --t-body-lh:       1.55;
+  --t-body-weight:   400;
+
+  --t-small-size:    14px;
+  --t-small-lh:      1.5;
+
+  /* Eyebrow / label — uppercase utility */
+  --t-eyebrow-size:  12px;
+  --t-eyebrow-lh:    1;
+  --t-eyebrow-track: 0.18em;
+  --t-eyebrow-weight:700;
+
+  /* Script — for the friendly, signature-y notes */
+  --t-script-size:   clamp(40px, 5vw, 72px);
+  --t-script-lh:     0.95;
+
+  /* ====================================================
+     SHAPE, ELEVATION, MOTION
+     Highdive's identity is FLAT and EDITORIAL. Corners are
+     mostly sharp; cards rarely have shadow. The visual
+     weight comes from color blocks + typography, not chrome.
+     ==================================================== */
+
+  --radius-0:        0;        /* default — sharp blocks */
+  --radius-1:        2px;      /* hairline rounding for inputs */
+  --radius-2:        6px;
+  --radius-pill:     999px;    /* CTAs use full pill */
+
+  --stroke-1:        1.5px;
+  --stroke-2:        2.5px;
+  --stroke-3:        4px;
+
+  --shadow-sm:       0 1px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md:       0 8px 24px rgba(10, 10, 10, 0.10);
+  --shadow-lg:       0 20px 48px rgba(10, 10, 10, 0.18);
+  /* Editorial inset border — used on cream cards in lieu of shadow */
+  --shadow-inset-stroke: inset 0 0 0 1.5px var(--hd-black);
+
+  /* Easing — confident, fast, no bounce */
+  --ease-out:        cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out:     cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:        140ms;
+  --dur:             220ms;
+  --dur-slow:        420ms;
+
+  /* Spacing scale (8px base) */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES — apply via class or element selector
+   ============================================================ */
+
+html { color: var(--fg-1); background: var(--bg-1); }
+body {
+  font-family: var(--font-sans);
+  font-size: var(--t-body-size);
+  line-height: var(--t-body-lh);
+  font-weight: var(--t-body-weight);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.t-mega, h1.t-mega {
+  font-family: var(--font-display);
+  font-size: var(--t-mega-size);
+  line-height: var(--t-mega-lh);
+  font-weight: var(--t-mega-weight);
+  letter-spacing: var(--t-mega-tracking);
+  text-transform: uppercase;
+}
+
+.t-display {
+  font-family: var(--font-display);
+  font-size: var(--t-display-size);
+  line-height: var(--t-display-lh);
+  font-weight: var(--t-display-weight);
+  text-transform: uppercase;
+}
+
+h1, .t-h1 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h1-size);
+  line-height: var(--t-h1-lh);
+  font-weight: var(--t-h1-weight);
+  letter-spacing: -0.02em;
+}
+
+h2, .t-h2 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h2-size);
+  line-height: var(--t-h2-lh);
+  font-weight: var(--t-h2-weight);
+  letter-spacing: -0.01em;
+}
+
+h3, .t-h3 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h3-size);
+  line-height: var(--t-h3-lh);
+  font-weight: var(--t-h3-weight);
+}
+
+p, .t-body { font-size: var(--t-body-size); line-height: var(--t-body-lh); }
+small, .t-small { font-size: var(--t-small-size); line-height: var(--t-small-lh); }
+
+.t-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--t-eyebrow-size);
+  font-weight: var(--t-eyebrow-weight);
+  letter-spacing: var(--t-eyebrow-track);
+  line-height: var(--t-eyebrow-lh);
+  text-transform: uppercase;
+}
+
+.t-script {
+  font-family: var(--font-script);
+  font-size: var(--t-script-size);
+  line-height: var(--t-script-lh);
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1.5px;
+  transition: color var(--dur) var(--ease-out);
+}
+a:hover { color: var(--hd-orange); }
+
+::selection { background: var(--hd-orange); color: var(--hd-white); }

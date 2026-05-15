@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Spacing Scale</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { width: 700px; padding: 24px 28px; background: #F4EFE5; color: #0A0A0A; display: flex; flex-direction: column; gap: 8px; }
+  .row { display: grid; grid-template-columns: 70px 1fr 60px; align-items: center; gap: 12px; font-size: 12px; }
+  .lbl { font-weight: 700; letter-spacing: 0.06em; font-family: var(--font-sans); }
+  .bar { height: 12px; background: #0A0A0A; border-radius: 2px; }
+  .px { font-family: var(--font-sans); font-size: 11px; opacity: 0.6; text-align: right; letter-spacing: 0.04em; }
+</style></head>
+<body>
+  <div class="card">
+    <div class="row"><span class="lbl">--sp-1</span><div class="bar" style="width:4px"></div><span class="px">4 px</span></div>
+    <div class="row"><span class="lbl">--sp-2</span><div class="bar" style="width:8px"></div><span class="px">8 px</span></div>
+    <div class="row"><span class="lbl">--sp-3</span><div class="bar" style="width:12px"></div><span class="px">12 px</span></div>
+    <div class="row"><span class="lbl">--sp-4</span><div class="bar" style="width:16px"></div><span class="px">16 px</span></div>
+    <div class="row"><span class="lbl">--sp-5</span><div class="bar" style="width:24px"></div><span class="px">24 px</span></div>
+    <div class="row"><span class="lbl">--sp-6</span><div class="bar" style="width:32px"></div><span class="px">32 px</span></div>
+    <div class="row"><span class="lbl">--sp-7</span><div class="bar" style="width:48px"></div><span class="px">48 px</span></div>
+    <div class="row"><span class="lbl">--sp-8</span><div class="bar" style="width:64px"></div><span class="px">64 px</span></div>
+    <div class="row"><span class="lbl">--sp-9</span><div class="bar" style="width:96px"></div><span class="px">96 px</span></div>
+    <div class="row"><span class="lbl">--sp-10</span><div class="bar" style="width:128px"></div><span class="px">128 px</span></div>
+  </div>
+</body></html>

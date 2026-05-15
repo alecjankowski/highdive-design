@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Form Inputs</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { width: 700px; padding: 28px; background: #F4EFE5; color: #0A0A0A; display: flex; flex-direction: column; gap: 16px; }
+  .label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .input {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    padding: 14px 16px;
+    background: #FFFFFF;
+    color: #0A0A0A;
+    border: 1.5px solid rgba(10,10,10,0.25);
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 220ms cubic-bezier(.2,.8,.2,1);
+  }
+  .input:focus { border-color: #0A0A0A; }
+  .input::placeholder { color: rgba(10,10,10,0.4); }
+  .row { display: flex; gap: 14px; }
+  .row > .field { flex: 1; }
+  textarea.input { resize: none; min-height: 64px; line-height: 1.5; }
+  .check { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+  .check input { width: 18px; height: 18px; accent-color: #0A0A0A; }
+</style></head>
+<body>
+  <div class="card">
+    <div class="row">
+      <div class="field">
+        <div class="label">Your name</div>
+        <input class="input" value="Alex Rivera">
+      </div>
+      <div class="field">
+        <div class="label">Email</div>
+        <input class="input" placeholder="you@brand.com">
+      </div>
+    </div>
+    <div class="field">
+      <div class="label">Tell us about the work</div>
+      <textarea class="input" placeholder="A short note — we'll write back inside 48 hours."></textarea>
+    </div>
+    <label class="check"><input type="checkbox" checked> Subscribe to the Dive — our occasional newsletter.</label>
+  </div>
+</body></html>

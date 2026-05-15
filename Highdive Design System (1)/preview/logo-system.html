@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Logo System</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { width: 700px; height: 180px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); background: #F4EFE5; }
+  .pane { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px; gap: 8px; border-right: 1px solid rgba(10,10,10,0.12); }
+  .pane:last-child { border-right: 0; }
+  .pane img { max-width: 100%; max-height: 100px; display: block; }
+  .lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.65; color: #0A0A0A; text-align: center; }
+</style></head>
+<body>
+  <div class="card">
+    <div class="pane"><img src="../assets/logos/HD_Monogram/HD_Monogram_Black.png"><div class="lbl">HD Monogram</div></div>
+    <div class="pane"><img src="../assets/logos/Diver/Diver_Orange.png"><div class="lbl">The Diver</div></div>
+    <div class="pane"><img src="../assets/logos/Stamp/HD_Stamp_Black.png"><div class="lbl">Stamp</div></div>
+    <div class="pane"><img src="../assets/logos/HD_Script/HD_Script_Black.png" style="max-height:60px"><div class="lbl">HD Script</div></div>
+  </div>
+</body></html>
